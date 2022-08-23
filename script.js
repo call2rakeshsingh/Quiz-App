@@ -25,6 +25,8 @@ let minutes = examMin;
 let hours = examHr;
 let stopTimer = true;
 
+let i = 1;
+
 
 function selectedAnswer() {
   resetAnswerColor();
