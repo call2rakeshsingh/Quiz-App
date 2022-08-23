@@ -149,7 +149,7 @@ function submit() {
 
   stopTimer = false;
   protectAnswerAfterSubmitID.style.display = "block";
-  protectAnswerAfterSubmitID.style.backgroundColor = "rgba(0,0,0,0.1)";
+  protectAnswerAfterSubmitID.style.backgroundColor = "rgba(0,0,0,0)";
   resetID.style.zIndex = 1;
 
   j = 1;
