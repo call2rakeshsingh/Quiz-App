@@ -154,6 +154,8 @@ function submit() {
 }
 
 function reset() {
+    let text = "Are You Sure You Want To Quit The Quiz";
+  if (confirm(text) == true) {
   for (let k = 1; k <= 12; k++) {
     if (document.getElementById("checkbox" + k).checked == true) {
       document.getElementById("checkbox" + k).checked = false;
@@ -163,6 +165,7 @@ function reset() {
     document.getElementById("min").innerHTML = "00"
     document.getElementById("hr").innerHTML = "00"
     // console.log(k);
+  }
   }
 
   resetAnswerColor();
