@@ -1,0 +1,290 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: sans-serif;
+}
+
+.currecAnswer {
+  display: none;
+}
+
+#nav{
+  position: fixed;
+  z-index: 100;
+  background-color: white;
+  height: 18vh;
+  box-shadow: 0vh 0.1vw 1vh 0.1vw rgb(175, 175, 175);
+
+}
+
+#quizName {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 8vh;
+  font-size: 2vw;
+  font-weight: bold;
+  background-color: rgb(81, 0, 173);
+  color: white;
+}
+
+#topRecords{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2vh;
+
+}
+
+
+
+#totalScore {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  font-size: 1.60vw;
+  font-weight: bold;
+  color: white;
+  width: 60vw;
+  height: 6vh;
+  border: none;
+  border-radius: 1vw;
+  background-color: white;
+  user-select: none;
+}
+
+#quizTime {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 1.5vw;
+  margin-right: 1.5vw;
+  border-radius: 0.75vw;
+  width: 12vw;
+  height: 6vh;
+  font-size: 1.5vw;
+  font-weight: bold;
+  border: none;
+  background-color: red;
+  color: white;
+}
+
+#reset {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: .95vw;
+  margin-right: 1.5vw;
+  background-color: rgb(185, 185, 185);
+  width: 12vw;
+  height: 6vh;
+  font-size: 1vw;
+  font-weight: bold;
+  border: none;
+  color: white;
+  border-radius: 0.75vw;
+}
+
+#reset:hover {
+  background-color: rgb(178, 33, 250) !important;
+  cursor: pointer;
+}
+
+.questionAnswerContainer {
+  position: absolute;
+  width: 99vw;
+  margin-top: 20vh;
+
+}
+
+.questionPartition {
+  margin: 5vh auto 0vh auto;
+  list-style: none;
+  height: 60vh;
+  width: 60vw;
+  border: .1vw solid rgb(192, 192, 192);
+  box-shadow: 1vh .5vw 1.5vh rgb(159, 159, 159);
+  border-radius: 1.1vw;
+  
+}
+
+.question {
+  display: flex;
+  border: .1vw solid rgb(192, 192, 192);
+  width: 55.8vw;
+  padding: 4vh 2vw;
+  background-color: rgb(211, 252, 255);
+  font-size: 1.75vw;
+  border-radius: 1vw 1vw 0vw 0vw;
+}
+
+.questionNumber{
+  display: flex;
+  justify-content: center;
+  width: 6vw;
+  padding-right: 1vw;
+    /* border: 1px solid black; */
+}
+
+.questionContent{
+  width: 70vw;
+  /* border:  1px solid black; */
+}
+
+
+
+.answer {
+  margin: 4vh 1.5vw 2vh 1.5vw;
+  /* border-radius: 0vw 0vw 1vw 1vw; */
+}
+
+li {
+  display: flex;
+  margin: 1vh 0.075vw;
+  padding: 1vh 0.75vw;
+  width: 55vw;
+  height: 6.5vh;
+  border-radius: 2vh;
+  font-size: 1.5vw;
+  border: 0.1vw solid rgb(186, 186, 186);
+}
+
+li:hover {
+  background-color: rgb(254, 239, 255) !important;
+}
+
+.answer label {
+
+  display: flex;
+  align-items: center;
+  width: 55vw;
+  height: 6.5vh;
+  padding-left: 1vw;
+  cursor: pointer;
+
+
+}
+
+.spanClass {
+  padding-left: 2vw;
+  display: flex;
+  width: 47vw;
+  height: 8vh;
+  align-items: center;
+  font-size: 1.5vw;
+  font-weight: normal;
+  margin-left: 1.5vw;
+  border-left: .1vw solid rgb(186, 186, 186);
+}
+
+input[type="radio"] {
+  width: 1.5vw;
+}
+
+#protectAnswerAfterSubmit {
+  width: 98.7vw;
+  height: 250vh;
+  position: absolute;
+  margin-top: -6vh;
+  display: block;
+  background-color: white;
+  z-index: 50;
+}
+
+#ready {
+  position: fixed;
+  z-index: 51;
+  height: 6vh;
+  width: 20vw;
+
+  display: block;
+  margin: 70vh 40vw 35vh 40vw;
+  cursor: pointer;
+  background-color: blueviolet;
+  color: white;
+  font-weight: bold;
+  font-size: 1.6vw;
+  border: none;
+  border-radius: 1vw;
+}
+#readyTimer {
+  z-index: 51;
+  height: 30vh;
+  width: 30vw;
+  position: fixed;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  margin: 30vh 35.5vw 15vh 35.5vw;
+  cursor: pointer;
+  background-color: orange;
+  color: white;
+  font-weight: bold;
+  font-size: 12vw;
+  border: none;
+  border-radius: 1vw 1vw 0vw 0vw;
+}
+#readyTimerText {
+  position: fixed;
+  z-index: 51;
+  height: 5vh;
+  width: 30vw;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  margin: 60vh 35.5vw 15vh 35.5vw;
+  cursor: pointer;
+  background-color: rgb(197, 128, 0);
+  color: white;
+  font-weight: bold;
+  font-size: 1vw;
+  border: none;
+  border-radius: 0vw 0vw 1vw 1vw;
+}
+
+
+#buttonContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  margin: 225vh 1vw 10vh 1vw;
+  padding: 1vh 0vw;
+  width: 10vw;
+  border: none;
+  border-radius: 0.75vw;
+  font-size: 1.6vw;
+  font-weight: bold;
+  background-color: rgb(81, 0, 173);
+  color: white;
+  cursor: pointer;
+  box-shadow: .1vh 0.1vw .25vh 0.1vw rgb(175, 175, 175);
+}
+
+#submitButton:hover {
+  background-color: rgb(194, 0, 0) !important;
+}
+
+#submitButton:active {
+  background-color: rgb(139, 0, 0) !important;
+}
+
+#previousButton:hover {
+  background-color: rgb(0, 91, 194) !important;
+}
+
+#previousButton:active {
+  background-color: rgb(1, 63, 134) !important;
+}
+
+#nextButton:hover {
+  background-color: rgb(0, 91, 194) !important;
+}
+
+#nextButton:active {
+  background-color: rgb(1, 63, 134) !important;
+}
